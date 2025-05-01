@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Cart - Travel Explorer</title>
+  <title>Destinations - Travel Explorer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styling/styles.css">
+
 </head>
 <body>
   <nav>
@@ -18,26 +19,33 @@
       <li><a href="destinations.html">Destinations</a></li>
       <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="login.html">Login</a></li>
+      <li><a href="login.html">Account</a></li>
     </ul>
   </nav>
 
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <h1>Your Cart</h1>
-      <p>Review and manage your selected destinations</p>
+      <h1>All Destinations</h1>
+      <p>Explore our full catalog of amazing destinations around the world</p>
     </div>
   </section>
 
-  <!-- Cart Content -->
-  <section class="cart-section">
+  <!-- Search Section -->
+  <section class="search-section">
     <div class="container">
-      <div id="cart-items" class="cart-items-container"></div>
-      <div class="cart-summary">
-        <a href="destinations.html" class="btn secondary-btn">Continue Shopping</a>
-        <a href="#" class="btn primary-btn">Proceed to Checkout</a>
+      <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search destinations, cities, or experiences..." />
+        <button class="search-btn">Search</button>
       </div>
+    </div>
+  </section>
+
+  <!-- Destinations List -->
+  <section class="destinations-section">
+    <div class="container">
+      <div id="destinations-container" class="destinations"></div>
     </div>
   </section>
 
@@ -48,7 +56,7 @@
     </div>
   </footer>
 
-  <script src="data/destinationsData.js"></script>
-  <script src="script.js"></script>
+  <script src="../data/destinationsData.js"></script>
+  <script src="../Logic/script.js"></script>
 </body>
 </html>

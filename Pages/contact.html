@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Travel Explorer</title>
+  <title>Contact Us - Travel Explorer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styling/styles.css">
+
 </head>
 <body>
   <nav>
@@ -16,8 +17,9 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="destinations.html">Destinations</a></li>
-      <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+      <li><a href="#" onclick="openCart(); return false;">Cart (<span id="cart-count">0</span>)</a></li>
       <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li><a href="login.html">Account</a></li>
     </ul>
   </nav>
@@ -25,79 +27,48 @@
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <h1>About Us</h1>
-      <p>Learn more about Travel Explorer and our mission</p>
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you</p>
     </div>
   </section>
 
-  <!-- About Content -->
-  <section class="about-section">
-    <div class="container">
-      <div class="about-content">
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Our Team">
-        </div>
-        <div class="about-text">
-          <h2>Our Story</h2>
-          <p>Travel Explorer was founded in 2020 with a simple mission: to make extraordinary travel experiences accessible to everyone. We believe that travel has the power to transform lives, broaden perspectives, and create lasting memories.</p>
-          <p>Our team of experienced travel enthusiasts carefully curates each destination to ensure you get the most authentic and enjoyable experience possible. We partner with local guides and businesses to provide you with insider knowledge and support local communities.</p>
-          <p>Whether you're looking for adventure, relaxation, cultural immersion, or a mix of everything, we're here to help you explore the world your way.</p>
-          
-          <h3>Our Values</h3>
-          <ul>
-            <li><i class="fas fa-check"></i> Authenticity in every experience</li>
-            <li><i class="fas fa-check"></i> Sustainability and responsible tourism</li>
-            <li><i class="fas fa-check"></i> Exceptional customer service</li>
-            <li><i class="fas fa-check"></i> Inclusive and accessible travel</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Contact Section -->
+  <!-- Contact Content -->
   <section class="contact-section">
     <div class="container">
-      <div class="section-header">
-        <h2>Contact Us</h2>
-        <p>We'd love to hear from you</p>
-      </div>
-      
       <div class="contact-content">
         <div class="contact-info">
-          <h3>Get In Touch</h3>
+          <h2>Get In Touch</h2>
           <div class="contact-item">
             <i class="fas fa-envelope"></i>
             <div>
-              <h4>Email</h4>
+              <h3>Email</h3>
               <p>support@travelexplorer.com</p>
             </div>
           </div>
           <div class="contact-item">
             <i class="fas fa-phone-alt"></i>
             <div>
-              <h4>Phone</h4>
+              <h3>Phone</h3>
               <p>+91-9876543210</p>
             </div>
           </div>
           <div class="contact-item">
             <i class="fas fa-map-marker-alt"></i>
             <div>
-              <h4>Address</h4>
+              <h3>Address</h3>
               <p>123 Travel Street, City, Country</p>
             </div>
           </div>
           <div class="contact-item">
             <i class="fas fa-clock"></i>
             <div>
-              <h4>Business Hours</h4>
+              <h3>Business Hours</h3>
               <p>Monday - Friday: 9AM - 5PM</p>
             </div>
           </div>
         </div>
-        
         <div class="contact-form">
-          <h3>Send Us a Message</h3>
+          <h2>Send Us a Message</h2>
           <form>
             <div class="form-group">
               <label for="name">Your Name</label>
@@ -122,6 +93,21 @@
     </div>
   </section>
 
+  <!-- Cart Modal -->
+  <div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button class="cart-close" onclick="closeCart()">&times;</button>
+      </div>
+      <div id="cart-items" class="cart-items-container"></div>
+      <div class="cart-actions">
+        <button onclick="closeCart()" class="btn secondary-btn">Continue Shopping</button>
+        <button class="btn primary-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer>
     <div class="footer-bottom">
@@ -129,7 +115,18 @@
     </div>
   </footer>
 
-  <script src="data/destinationsData.js"></script>
-  <script src="script.js"></script>
+  <script src="../data/destinationsData.js"></script>
+  <script src="../Logic/script.js"></script>
+  <script>
+    function openCart() {
+      document.getElementById('cartModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCart() {
+      document.getElementById('cartModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  </script>
 </body>
 </html>
