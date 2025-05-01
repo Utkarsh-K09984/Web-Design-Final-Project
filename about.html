@@ -1,39 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Travel Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Travel Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>About Us</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="profile.html">Profile</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Our Mission</h2>
-            <p>At Travel Website, our mission is to provide you with the best travel experiences and help you explore the world with ease.</p>
-        </section>
-        <section>
-            <h2>Our Team</h2>
-            <p>We are a group of travel enthusiasts dedicated to making your journey memorable. Our team consists of experienced travelers, writers, and customer service experts.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Travel Website. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+  <nav>
+    <div class="logo">Travel Explorer</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="login.html">Account</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>About Us</h1>
+      <p>Learn more about Travel Explorer and our mission</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Our Team">
+        </div>
+        <div class="about-text">
+          <h2>Our Story</h2>
+          <p>Travel Explorer was founded in 2020 with a simple mission: to make extraordinary travel experiences accessible to everyone. We believe that travel has the power to transform lives, broaden perspectives, and create lasting memories.</p>
+          <p>Our team of experienced travel enthusiasts carefully curates each destination to ensure you get the most authentic and enjoyable experience possible. We partner with local guides and businesses to provide you with insider knowledge and support local communities.</p>
+          <p>Whether you're looking for adventure, relaxation, cultural immersion, or a mix of everything, we're here to help you explore the world your way.</p>
+          
+          <h3>Our Values</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Authenticity in every experience</li>
+            <li><i class="fas fa-check"></i> Sustainability and responsible tourism</li>
+            <li><i class="fas fa-check"></i> Exceptional customer service</li>
+            <li><i class="fas fa-check"></i> Inclusive and accessible travel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you</p>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>support@travelexplorer.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>+91-9876543210</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Address</h4>
+              <p>123 Travel Street, City, Country</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Monday - Friday: 9AM - 5PM</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="primary-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Travel Explorer. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="data/destinationsData.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

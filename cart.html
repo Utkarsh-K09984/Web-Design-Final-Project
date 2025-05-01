@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - Travel Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Your Shopping Cart</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="profile.html">Profile</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="cart-items">
-            <h2>Your Items</h2>
-            <ul id="cart-list">
-                <!-- Cart items will be dynamically added here -->
-            </ul>
-        </section>
-        <section id="cart-summary">
-            <h2>Cart Summary</h2>
-            <p id="total-price">Total: $0.00</p>
-            <button id="checkout-button">Proceed to Checkout</button>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Travel Website. All rights reserved.</p>
-    </footer>
-    <script src="cart.js"></script>
+  <nav>
+    <div class="logo">Travel Explorer</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Your Cart</h1>
+      <p>Review and manage your selected destinations</p>
+    </div>
+  </section>
+
+  <!-- Cart Content -->
+  <section class="cart-section">
+    <div class="container">
+      <div id="cart-items" class="cart-items-container"></div>
+      <div class="cart-summary">
+        <a href="destinations.html" class="btn secondary-btn">Continue Shopping</a>
+        <a href="#" class="btn primary-btn">Proceed to Checkout</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Travel Explorer. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="data/destinationsData.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

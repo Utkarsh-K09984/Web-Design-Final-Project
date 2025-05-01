@@ -1,44 +1,114 @@
 const destinationsData = [
     {
-        id: 1,
-        name: "Paris",
-        country: "France",
-        description: "The city of light, known for its art, fashion, and culture.",
-        image: "images/paris.jpg",
-        activities: ["Eiffel Tower", "Louvre Museum", "Notre-Dame Cathedral"]
+      id: 1,
+      title: "Bali Paradise",
+      location: "Bali, Indonesia",
+      image: "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=800",
+      price: 1299,
+      rating: 4.8,
+      duration: "7 days",
+      description: "Experience the tropical paradise with pristine beaches and vibrant culture.",
+      schedule: {
+        startDate: "2025-04-01", // Available start date
+        endDate: "2025-12-31",  // Available end date
+      },
     },
     {
-        id: 2,
-        name: "Tokyo",
-        country: "Japan",
-        description: "A bustling metropolis known for its modernity and traditional culture.",
-        image: "images/tokyo.jpg",
-        activities: ["Shibuya Crossing", "Tokyo Tower", "Senso-ji Temple"]
+      id: 2,
+      title: "Swiss Alps Adventure",
+      location: "Interlaken, Switzerland",
+      image: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=800",
+      price: 1899,
+      rating: 4.9,
+      duration: "10 days",
+      description: "Enjoy breathtaking mountain views and thrilling outdoor activities.",
+      schedule: {
+        startDate: "2025-05-01",
+        endDate: "2025-10-31",
+      },
     },
     {
-        id: 3,
-        name: "New York City",
-        country: "USA",
-        description: "The Big Apple, famous for its skyline and vibrant culture.",
-        image: "images/nyc.jpg",
-        activities: ["Statue of Liberty", "Central Park", "Times Square"]
+      id: 3,
+      title: "Historic Rome Tour",
+      location: "Rome, Italy",
+      image: "https://images.pexels.com/photos/164336/pexels-photo-164336.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=800",
+      price: 1499,
+      rating: 4.7,
+      duration: "6 days",
+      description: "Walk through ancient history and experience authentic Italian cuisine.",
+      schedule: {
+        startDate: "2025-03-01",
+        endDate: "2025-11-30",
+      },
     },
     {
-        id: 4,
-        name: "Sydney",
-        country: "Australia",
-        description: "Known for its Sydney Opera House and beautiful harbor.",
-        image: "images/sydney.jpg",
-        activities: ["Sydney Opera House", "Bondi Beach", "Harbour Bridge"]
+      id: 4,
+      title: "Tokyo Explorer",
+      location: "Tokyo, Japan",
+      image: "https://images.pexels.com/photos/1619564/pexels-photo-1619564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=800",
+      price: 1799,
+      rating: 4.6,
+      duration: "8 days",
+      description: "Immerse yourself in the perfect blend of tradition and ultramodern culture.",
+      schedule: {
+        startDate: "2025-06-01",
+        endDate: "2025-12-15",
+      },
     },
     {
-        id: 5,
-        name: "Cape Town",
-        country: "South Africa",
-        description: "Famous for its stunning landscapes and Table Mountain.",
-        image: "images/capetown.jpg",
-        activities: ["Table Mountain", "Robben Island", "Cape of Good Hope"]
-    }
-];
-
-export default destinationsData;
+      id: 5,
+      title: "Santorini Getaway",
+      location: "Santorini, Greece",
+      image: "https://images.pexels.com/photos/164098/pexels-photo-164098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=800",
+      price: 1599,
+      rating: 4.9,
+      duration: "5 days",
+      description: "Enjoy stunning sunsets and white-washed buildings on this romantic island.",
+      schedule: {
+        startDate: "2025-04-15",
+        endDate: "2025-09-30",
+      },
+    },
+    {
+      id: 6,
+      title: "Machu Picchu Trek",
+      location: "Cusco, Peru",
+      image: "https://images.pexels.com/photos/259447/pexels-photo-259447.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=800",
+      price: 1999,
+      rating: 4.8,
+      duration: "9 days",
+      description: "Discover ancient Incan ruins and breathtaking mountain landscapes.",
+      schedule: {
+        startDate: "2025-05-01",
+        endDate: "2025-10-31",
+      },
+    },
+    {
+      id: 7,
+      title: "Safari Adventure",
+      location: "Masai Mara, Kenya",
+      image: "https://images.pexels.com/photos/667205/pexels-photo-667205.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=800",
+      price: 2499,
+      rating: 4.9,
+      duration: "7 days",
+      description: "Experience the thrill of African wildlife in its natural habitat.",
+      schedule: {
+        startDate: "2025-06-01",
+        endDate: "2025-12-31",
+      },
+    },
+    {
+      id: 8,
+      title: "Great Barrier Reef",
+      location: "Queensland, Australia",
+      image: "https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=800",
+      price: 2199,
+      rating: 4.8,
+      duration: "6 days",
+      description: "Dive into the world's largest coral reef system and explore marine life.",
+      schedule: {
+        startDate: "2025-03-01",
+        endDate: "2025-11-30",
+      },
+    },
+  ];
