@@ -55,7 +55,7 @@ function removeFromCart(id) {
 }
 
 // ✅ Checkout Function
-function checkout() {
+function checkout() { 
   // Calculate total price
   let totalPrice = 0;
   cart.forEach(id => {
