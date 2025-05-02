@@ -118,7 +118,7 @@
       document.getElementById(tabName).classList.add('active');
       
       // Activate selected tab
-      event.target.classList.add('active');
+      document.querySelector(`.tab[onclick="showTab('${tabName}')"]`).classList.add('active');
     }
   </script>
 </body>
