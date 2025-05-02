@@ -54,6 +54,29 @@ function removeFromCart(id) {
   location.reload();
 }
 
+// ✅ Checkout Function
+function checkout() {
+  // Calculate total price
+  let totalPrice = 0;
+  cart.forEach(id => {
+    const des = destinationsData.find(d => d.id === id);
+    if (des) {
+      totalPrice += Number(des.price);
+    }
+  });
+  
+  // Show alert with total amount
+  alert(`Order placed successfully! Total amount: $${totalPrice}`);
+  
+  // Empty cart
+  cart = [];
+  localStorage.setItem('cart', JSON.stringify(cart));
+  
+  // Update UI
+  updateCartCount();
+  cartConent();
+}
+
 // ✅ Load Cart Content (if on cart.html)
 function cartConent() {
   let cartContainer = document.getElementById("cart-items");
@@ -140,4 +163,17 @@ if (container && searchInput) {
 // ✅ If on cart page
 if (document.getElementById("cart-items")) {
   cartConent();
+  
+  // Add event listener to checkout button
+  const checkoutBtn = document.querySelector('.cart-summary .primary-btn');
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (cart.length > 0) {
+        checkout();
+      } else {
+        alert("Your cart is empty. Please add items before checking out.");
+      }
+    });
+  }
 }
